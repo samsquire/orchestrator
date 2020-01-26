@@ -1,0 +1,12 @@
+machines:
+- name: "web{{ count.index }}"
+  count: 3
+  images:
+  - name: nginx
+    dockerfile: nginx.Dockerfile
+
+- name: "haproxy{{ count.index }}"
+  count: 3
+  images:
+  - name: haproxy
+    dockerfile: haproxy.Dockerfile
