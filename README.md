@@ -1,4 +1,3 @@
 # orchestrator
 
-SSH into machine
-Run container
+This orchestrator SSHs into machines and runs Docker containers.
