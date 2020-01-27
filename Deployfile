@@ -1,12 +1,16 @@
 machines:
-- name: "web{{ count.index }}"
-  count: 3
+- name: ec2-3-10-139-48.eu-west-2.compute.amazonaws.com
+  user: ubuntu
+  key: ~/.ssh/vvv-sam-n550jv
+  count: 1
   images:
   - name: nginx
     dockerfile: nginx.Dockerfile
 
-- name: "haproxy{{ count.index }}"
-  count: 3
+- name:  ec2-18-130-251-221.eu-west-2.compute.amazonaws.com
+  key: ~/.ssh/vvv-sam-n550jv
+  user: ubuntu
+  count: 1
   images:
-  - name: haproxy
+  - name: nginx
     dockerfile: haproxy.Dockerfile
